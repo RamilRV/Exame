@@ -4,8 +4,7 @@ import java.awt.*
 
 class FunctionPainter(
     private val plane: CartesianPlane,
-    var function1: (Double)->Double = Math::cos,
-    var function2: (Double)->Double = Math::cos
+    var function: FunctionIn
 ) : Painter{
 
     var funColor: Color = Color.BLUE
@@ -25,10 +24,10 @@ class FunctionPainter(
                 var t = -100.0
                 while (t<=100){
                     drawLine(
-                        xCrt2Scr(function2(t)),
-                        yCrt2Scr(function1(t)),
-                        xCrt2Scr(function2(t+0.1)),
-                        yCrt2Scr(function1(t+0.1))
+                        xCrt2Scr(function.function1(t)),
+                        yCrt2Scr(function.function2(t)),
+                        xCrt2Scr(function.function1(t+0.1)),
+                        yCrt2Scr(function.function2(t+0.1))
                     )
                     t = t +0.1
                 }
