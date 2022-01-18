@@ -26,7 +26,6 @@ class CartesianPainter(private val plane: CartesianPlane) : Painter{
             stroke = BasicStroke(2F)
             color = maxTickColor
             font = mainFont
-            //var tickValue = 0.0
             var k = plane.xDen.toInt()
             var t = plane.xDen.toInt()
             if(plane.xMin.toInt()>0.1) t=0

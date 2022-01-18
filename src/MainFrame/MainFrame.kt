@@ -60,9 +60,10 @@ class MainFrame : JFrame(){
             yMin.value as Double,
             yMax.value as Double,
         )
-        val f = Function()
-        val f1 = FunctionPainter(plane, f::fx , f ::const)
-        val f2 = FunctionPainter(plane, f::ty, f::tx)
+        val function = Function()
+        val functionparam = FunctionParam()
+        val f1 = FunctionPainter(plane, function::function2, function::function1)
+        val f2 = FunctionPainter(plane,functionparam::function2 , functionparam::function1)
         val cartesianPainter = CartesianPainter(plane)
         f1.funColor = Color.RED
         val painters = mutableListOf(cartesianPainter , f2, f1)
